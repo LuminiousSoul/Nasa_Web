@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 # Load dataset
 # ------------------------------
 
-file_url = "https://raw.githubusercontent.com/LuminiousSoul/Nasa_Web/main/SB_publication_PMC.csv"
+file_url = "https://github.com/LuminiousSoul/Nasa_Web/blob/main/SB_publication_PMC.csv"
 df = pd.read_csv(file_url)
 
 # Standardize columns
@@ -91,4 +91,5 @@ else:
             for rw in risk_words:
                 highlighted = re.sub(f"({rw})", r"**\1**", highlighted, flags=re.IGNORECASE)
             st.markdown(f"- {highlighted}  \n  [Read Paper]({row['Link']})")
+
 
